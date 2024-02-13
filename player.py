@@ -15,10 +15,9 @@ class Player(Turtle):
 
     def move(self):
         self.fd(MOVE_DISTANCE)
-        if self.ycor() == FINISH_LINE_Y:
-            self. __start_line()
 
-    def __start_line(self):
-        self.clear()
+    def is_at_finish_line(self):
+        return self.ycor() == FINISH_LINE_Y
+
+    def got_to_start_line(self):
         self.goto(STARTING_POSITION)
-
